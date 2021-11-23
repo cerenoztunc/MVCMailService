@@ -1,0 +1,17 @@
+﻿@model MailSendVM
+@{
+    ViewBag.Title = "Index";
+}
+@ViewBag.Message
+@using (Html.BeginForm())
+    
+{
+    <div>
+        @Html.TextBoxFor(x=>x.AppUser.Email, new { placeholder="Mail adresinizi giriniz"})
+    </div>
+    <div>
+        <button class="btn btn-primary">Gönder</button>
+    </div>
+
+}
+
